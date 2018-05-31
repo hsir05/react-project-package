@@ -25,3 +25,7 @@ npm install --save react-router-dom
 
 npm install --save react-redux，redux-thunk，
 npm install --save-dev redux-devtools
+
+**骨架屏**
+
+npm install --save react-placeholder
