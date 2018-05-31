@@ -6,7 +6,7 @@ import { Provider } from 'react-redux'
 import store from './store/store.js'
 
 import Home from './pages/home/home.jsx'
-import Me from './pages/me/me.jsx'
+import Me from './pages/me/index.js'
 
 export default class App extends React.Component {
   constructor(props){

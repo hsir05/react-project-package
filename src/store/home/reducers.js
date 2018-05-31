@@ -12,7 +12,7 @@ const ACTION_HANDLERS = {
 }
 
 const initialState = {
-  content:'其实 React Re，每个节点都可以看作一个这个节点以下部分子树的根节点 所以其实这个对比算法可以从 Virtual DOM 上任何一个节点开始执行。'
+  content:'其实个节点开始执行。'
 }
 
 export default function riskResultReduce (state = initialState, action) {

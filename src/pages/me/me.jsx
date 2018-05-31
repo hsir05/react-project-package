@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import { connect } from 'react-redux';
 
 import { Button, WhiteSpace,WingBlank } from 'antd-mobile';
 import ReactPlaceholder from 'react-placeholder'
@@ -20,7 +19,7 @@ const awesomePlaceholder = (
 );
 
 
-class Me extends Component {
+export default class Me extends Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -33,7 +32,7 @@ class Me extends Component {
     },3000)
   }
   componentDidMount () {
-    console.log(this.props);
+    console.log(this.props.content);
   }
   render() {
     let chil = (
@@ -46,13 +45,9 @@ class Me extends Component {
       <div className='me'>
         <ReactPlaceholder children={chil} ready={this.state.ready} customPlaceholder={awesomePlaceholder}>
         {/* <ReactPlaceholder type='media' children={chil} rows={2} ready={this.state.ready}> */}
-          <Button type="warning">warning disabled</Button><WhiteSpace />
+          {/* <Button type="warning">warning disabled</Button><WhiteSpace /> */}
         </ReactPlaceholder>
       </div>
     )
   }
 }
-export default connect(state => ({
-  content: state.home.content
-}
-), {})(Me);
