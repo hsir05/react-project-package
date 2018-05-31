@@ -20,12 +20,75 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
+    <style>
+    html{height: 100%;}
+    body{
+      height: 100%;
+      position: relative;
+    }
+    .spinner {
+      /* margin: 100px auto 0; */
+      width: 100%;
+      /* height: 100%; */
+      text-align: center;
+      display: flex;
+      /* align-items: center; */
+      justify-content: center;
+      position: absolute;
+      top:40%;
+    }
+
+    .spinner > div {
+      width: 30px;
+      height: 30px;
+      background-color: #67CF22;
+
+      border-radius: 100%;
+      display: inline-block;
+      -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+      animation: bouncedelay 1.4s infinite ease-in-out;
+      /* Prevent first frame from flickering when animation starts */
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+    }
+
+    .spinner .bounce1 {
+      -webkit-animation-delay: -0.32s;
+      animation-delay: -0.32s;
+    }
+
+    .spinner .bounce2 {
+      -webkit-animation-delay: -0.16s;
+      animation-delay: -0.16s;
+    }
+
+    @-webkit-keyframes bouncedelay {
+      0%, 80%, 100% { -webkit-transform: scale(0.0) }
+      40% { -webkit-transform: scale(1.0) }
+    }
+
+    @keyframes bouncedelay {
+      0%, 80%, 100% {
+        transform: scale(0.0);
+        -webkit-transform: scale(0.0);
+      } 40% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+      }
+    }
+    </style>
   </head>
   <body>
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
-    <div id="root"></div>
+    <div id="root">
+      <div class="spinner">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+      </div>
+    </div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.

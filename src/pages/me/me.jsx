@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import { Button, WhiteSpace,WingBlank } from 'antd-mobile';
 import './me.scss'
 
@@ -9,9 +10,9 @@ export default class Me extends Component {
   }
   render() {
     return (
-      <div style={{width:'70%',textCenter:'center',margin:'50px auto'}}>
+      <div className='me'>
         <WingBlank>
-           <Button type="warning">warning</Button><WhiteSpace />
+            <Link to="/"><div className='item'>home</div></Link>
            <Button type="warning">warning disabled</Button><WhiteSpace />
         </WingBlank>
       </div>
