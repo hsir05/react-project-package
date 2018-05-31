@@ -149,6 +149,9 @@ module.exports = {
               // This is a feature of `babel-loader` for webpack (not Babel itself).
               // It enables caching results in ./node_modules/.cache/babel-loader/
               // directory for faster rebuilds.
+              plugins: [
+                   ['import', [{ libraryName: "antd-mobile", style: 'css' }]],
+                ],
               cacheDirectory: true,
             },
           },
@@ -174,6 +177,7 @@ module.exports = {
                   // https://github.com/facebookincubator/create-react-app/issues/2677
                   ident: 'postcss',
                   plugins: () => [
+
                     require('postcss-flexbugs-fixes'),
                     autoprefixer({
                       browsers: [

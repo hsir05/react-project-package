@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Button, WhiteSpace,WingBlank } from 'antd-mobile';
 import './me.scss'
 
 export default class Me extends Component {
@@ -8,8 +9,11 @@ export default class Me extends Component {
   }
   render() {
     return (
-      <div >
-        通过上面的配置，这个应用知道如何渲染下面四个 URL：
+      <div style={{width:'70%',textCenter:'center',margin:'50px auto'}}>
+        <WingBlank>
+           <Button type="warning">warning</Button><WhiteSpace />
+           <Button type="warning">warning disabled</Button><WhiteSpace />
+        </WingBlank>
       </div>
     )
   }
