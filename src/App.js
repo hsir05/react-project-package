@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import store from './store/store.js'
 
-import Homepage from './pages/homepage/homepage.jsx'
+import home from './pages/home/home.jsx'
+import me from './pages/me/me.jsx'
 
 
 export default class App extends Component {
@@ -14,7 +15,8 @@ export default class App extends Component {
         <Provider store={store}>
           <Router>
             <Switch>
-              <Route path="/" component={Homepage}/>
+              <Route exact path="/" component={home}/>
+              <Route exact path="/me" component={me}/>
             </Switch>
           </Router>
         </Provider>
