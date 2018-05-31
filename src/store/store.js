@@ -1,11 +1,11 @@
 
 import {createStore, combineReducers, applyMiddleware} from 'redux';
 import thunk from 'redux-thunk';
-import riskResultReduce from './my_risk_assessment/reducers.js';
+import home from './home/reducers.js';
 
 let Store = createStore(
     combineReducers({
-      riskResult: riskResultReduce,
+      home: home,
     }),
     applyMiddleware(thunk)
 );

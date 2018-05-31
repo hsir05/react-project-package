@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import { connect } from 'react-redux';
+
 import { Button, WhiteSpace,WingBlank } from 'antd-mobile';
 import ReactPlaceholder from 'react-placeholder'
 import {TextBlock, MediaBlock, TextRow, RectShape, RoundShape} from 'react-placeholder/lib/placeholders';
@@ -17,7 +19,8 @@ const awesomePlaceholder = (
   </div>
 );
 
-export default class Me extends Component {
+
+class Me extends Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -28,6 +31,9 @@ export default class Me extends Component {
     setTimeout(() => {
       this.setState({ready:true})
     },3000)
+  }
+  componentDidMount () {
+    console.log(this.props);
   }
   render() {
     let chil = (
@@ -46,3 +52,7 @@ export default class Me extends Component {
     )
   }
 }
+export default connect(state => ({
+  content: state.home.content
+}
+), {})(Me);
