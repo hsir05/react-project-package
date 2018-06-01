@@ -29,3 +29,8 @@ npm install --save-dev redux-devtools
 **骨架屏**
 
 npm install --save react-placeholder
+
+
+classnames
+propTypes
+Immutable
