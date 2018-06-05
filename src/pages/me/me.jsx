@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-
-import { Button, WhiteSpace,WingBlank } from 'antd-mobile';
+import PropTypes from 'prop-types'
+import { Button, WhiteSpace,WingBlank } from 'antd-mobile'
 import ReactPlaceholder from 'react-placeholder'
 // import {TextBlock, MediaBlock, TextRow, RectShape, RoundShape} from 'react-placeholder/lib/placeholders';
 
-import 'react-placeholder/lib/reactPlaceholder.css';
+import 'react-placeholder/lib/reactPlaceholder.css'
 
 import './me.scss'
 
@@ -68,4 +68,8 @@ export default class Me extends Component {
       </div>
     )
   }
+}
+
+Me.propTypes = {
+  content: PropTypes.string
 }
