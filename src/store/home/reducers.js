@@ -1,6 +1,6 @@
 const RISK_RESULT = 'RISK_RESULT'
 
-export function getRiskResultData (data) {
+export function getData (data) {
   return {
     type: RISK_RESULT,
     payload:data
@@ -8,7 +8,7 @@ export function getRiskResultData (data) {
 }
 
 const ACTION_HANDLERS = {
-  [RISK_RESULT]: (state, action) => ({ ...state, home:action.payload})
+  [RISK_RESULT]: (state, action) => ({ ...state, content:action.payload})
 }
 
 const initialState = {
