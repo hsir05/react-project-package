@@ -71,5 +71,5 @@ export default class Me extends Component {
 }
 
 Me.propTypes = {
-  content: PropTypes.string
+  content:PropTypes.string.isRequired
 }
