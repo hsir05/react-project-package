@@ -1,19 +1,20 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
-import './home.scss'
+import React from 'react'
 
-export default class Home extends Component {
-  constructor (props) {
-    super(props)
-    this.state = {}
+import Loadable from 'react-loadable'
+// import Loading from './my-loading-component'
+import { ActivityIndicator } from 'antd-mobile'
+
+const LoadableComponent = Loadable({
+  loader: () => import('./hoemItem'),
+  loading: ActivityIndicator,
+})
+
+export default class Home extends React.Component {
+  state = {
+      animating: true,
   }
-  render() {
-    return (
-      <div className='home'>
-        <Link to="/"><div className='item'>home</div></Link>
 
-        <Link to="/me"><div className='item'>me</div></Link>
-      </div>
-    )
+  render() {
+    return <LoadableComponent/>
   }
 }

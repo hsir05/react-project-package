@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
+import {method as dbTool} from '../db/db'
 import { Button, WhiteSpace,WingBlank } from 'antd-mobile'
 import ReactPlaceholder from 'react-placeholder'
 // import {TextBlock, MediaBlock, TextRow, RectShape, RoundShape} from 'react-placeholder/lib/placeholders';
@@ -34,6 +35,8 @@ export default class Me extends Component {
   }
   componentDidMount () {
     console.log(this.props);
+    let params = {name:'风一样的男子',keyword:this.props.content}
+    dbTool.add(params)
   }
 
   componentDidUpdate () {
@@ -47,9 +50,10 @@ export default class Me extends Component {
   }
 
   changeVal () {
-    console.log(33);
-    this.props.getData('虽然localforage的API名称和localStorage一样')
+    this.props.getData('花一样的人')
     console.log(this.props);
+    let params = {name:'风一样的男子',keyword:this.props.content}
+    dbTool.add(params)
   }
 
   render() {
