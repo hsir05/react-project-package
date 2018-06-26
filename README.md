@@ -86,3 +86,7 @@ new BundleAnalyzerPlugin(
 **react 项目配置eslint**
 
 [参考文章](https://juejin.im/post/58ff0de18d6d810058a69a26)
+
+**react富文本编辑器**
+
+`https://github.com/jpuri/react-draft-wysiwyg`
