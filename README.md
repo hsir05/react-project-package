@@ -87,6 +87,9 @@ new BundleAnalyzerPlugin(
 
 [参考文章](https://juejin.im/post/58ff0de18d6d810058a69a26)
 
+配置pre-commit后 可以通过在命令中添加`--no-verify`参数来跳过，如:`git commit -m '~~' --no-verify`
+
+
 **react富文本编辑器**
 
 `https://github.com/jpuri/react-draft-wysiwyg`
