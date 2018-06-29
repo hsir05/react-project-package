@@ -90,7 +90,7 @@ new BundleAnalyzerPlugin(
 配置pre-commit后 可以通过在命令中添加`--no-verify`参数来跳过，如:`git commit -m '~~' --no-verify`
 
 
-### 4. 添加富文本编辑器
+### 4. 富文本编辑器
 
 `npm install --save braft-editor`
 
@@ -99,3 +99,7 @@ new BundleAnalyzerPlugin(
 `npm install --save react-draft-wysiwyg`
 
 [github](https://github.com/jpuri/react-draft-wysiwyg)
+
+### 5.react 项目优化
+
+[参考文章](https://juejin.im/post/5b302759e51d4558db46a9aa?utm_source=gold_browser_extension)
