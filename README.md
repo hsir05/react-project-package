@@ -46,36 +46,6 @@ Immutable
 classnames
 
 
-**文件打包体积分析**
-webpack有个插件，可以查看项目一共打了多少包，每个包的体积，每个包里面的包情况
-
-**安装**
-```
-npm install --save-dev webpack-bundle-analyzer
-```
-webpack.config.js 中的配置
-如果是create-react-app直接生成的，可将下面的内容添加到`webpack.config.prod.js`中
-
-```
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-plugins: [
-new BundleAnalyzerPlugin(
-   		{
-        analyzerMode: 'server',
-        analyzerHost: '127.0.0.1',
-			  analyzerPort: 8889,
-			  reportFilename: 'report.html',
-			  defaultSizes: 'parsed',
-			  openAnalyzer: true,
-			  generateStatsFile: false,
-			  statsFilename: 'stats.json',
-			  statsOptions: null,
-			  logLevel: 'info'
-      }
-   	),
-]
-```
-
 **在package.json的scripts里加入下面这句话，就可以npm run build之后看到webpack-bundle-analyzer的效果：**
 
 `"analyz": "NODE_ENV=production npm_config_report=true npm run build"`
@@ -83,23 +53,72 @@ new BundleAnalyzerPlugin(
 [参考地址](https://www.npmjs.com/package/webpack-bundle-analyzer)
 
 
-**react 项目配置eslint**
+### 4. 富文本编辑器
+
+`npm install --save braft-editor`  [github](https://github.com/margox/braft-editor)
+
+
+`npm install --save react-draft-wysiwyg` [github](https://github.com/jpuri/react-draft-wysiwyg)
+
+
+### 5.react 打包项目优化
+
+ + 5.1 文件打包体积分析
+
+  webpack有个插件，可以查看项目一共打了多少包，每个包的体积，每个包里面的包情况
+
+  **安装**
+  ```
+  npm install --save-dev webpack-bundle-analyzer
+  ```
+  webpack.config.js 中的配置
+  如果是create-react-app直接生成的，可将下面的内容添加到`webpack.config.prod.js`中
+
+  ```
+  const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+  plugins: [
+  new BundleAnalyzerPlugin(
+     		{
+          analyzerMode: 'server',
+          analyzerHost: '127.0.0.1',
+  			  analyzerPort: 8889,
+  			  reportFilename: 'report.html',
+  			  defaultSizes: 'parsed',
+  			  openAnalyzer: true,
+  			  generateStatsFile: false,
+  			  statsFilename: 'stats.json',
+  			  statsOptions: null,
+  			  logLevel: 'info'
+        }
+     	),
+  ]
+  ```
+[参考文章](https://juejin.im/post/5b302759e51d4558db46a9aa?utm_source=gold_browser_extension)
+
+[参考文章](https://segmentfault.com/a/1190000015414362)
+
+### 6.react 项目配置eslint
 
 [参考文章](https://juejin.im/post/58ff0de18d6d810058a69a26)
 
 配置pre-commit后 可以通过在命令中添加`--no-verify`参数来跳过，如:`git commit -m '~~' --no-verify`
 
 
-### 4. 富文本编辑器
+### 7. react 高阶组件学习
 
-`npm install --save braft-editor`
+[参考文章](https://segmentfault.com/a/1190000015361704)
 
-[github](https://github.com/margox/braft-editor)
+### 8. indexDB 操作案例
 
-`npm install --save react-draft-wysiwyg`
+[参考文章](https://segmentfault.com/a/1190000014950564)
 
-[github](https://github.com/jpuri/react-draft-wysiwyg)
+### 9. 高德地图使用
 
-### 5.react 项目优化
-
-[参考文章](https://juejin.im/post/5b302759e51d4558db46a9aa?utm_source=gold_browser_extension)
+```
+npm install --save react-amap
+```
+[参考文档](http://localhost:9001/articles/start)
+[参考文档](https://jsfiddle.net/h4u8mdng/14/)
+[参考文档](http://localhost:9001/articles/high)
+[参考文档](https://www.npmjs.com/package/react-amap-plugin-geolocation)
+[参考文档](https://npm.runkit.com/react-amap-plugin-geolocation)
